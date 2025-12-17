@@ -1,24 +1,161 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>История Интернета</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>История создания и развития интернета</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #5fc3e4, #2c82c9);
+            color: #ffffff;
+        }
+
+        header {
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+        }
+
+        section h2 {
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>История Интернета</h1>
-  </header>
 
-  <main>
-    <section>
-      <h2>Что такое Интернет</h2>
-      <p>Интернет — глобальная сеть...</p>
-    </section>
-  </main>
+<header>
+    <h1>История создания и развития интернета</h1>
+    <p>Учебный проект по информатике</p>
+    <p>Тищенко Александр, 9Б класс</p>
+</header>
 
-  <footer>
-    <p>Автор: Тищенко Александр, 9Б</p>
-  </footer>
+<nav>
+    <a href="#npl">NPL Network</a>
+    <a href="#arpanet">ARPANET</a>
+    <a href="#nsfnet">NSFNET</a>
+    <a href="#tcpip">TCP/IP</a>
+    <a href="#dns">DNS</a>
+    <a href="#www">WWW</a>
+</nav>
+
+<section id="npl">
+    <h2>NPL Network — первая пакетная сеть</h2>
+    <p>
+        В 1960-х годах в Национальной физической лаборатории Великобритании под руководством Дональда Дэвиса
+        была создана сеть NPL Network. Она стала первой сетью, где пакетная передача данных была реализована
+        на практике.
+    </p>
+    <p>
+        Данные передавались в виде небольших пакетов, которые могли идти разными путями и затем
+        собираться в исходное сообщение. Этот подход значительно повысил надёжность передачи информации
+        и эффективность использования каналов связи.
+    </p>
+</section>
+
+<section id="arpanet">
+    <h2>ARPANET</h2>
+    <p>
+        Идеи, проверенные в NPL Network, легли в основу ARPANET, запущенной в 1969 году агентством ARPA (США).
+        Сеть объединила университеты и исследовательские центры и стала первой национальной пакетной сетью.
+    </p>
+    <p>
+        В 1971 году в ARPANET появилась электронная почта, что показало практическую ценность сетевых
+        технологий и сделало сеть востребованной среди пользователей.
+    </p>
+</section>
+
+<section id="nsfnet">
+    <h2>NSFNET</h2>
+    <p>
+        В 1985 году Национальный научный фонд США создал NSFNET — сеть, которая объединила университеты,
+        научные центры и суперкомпьютеры. Она использовала протоколы TCP/IP и стала основой для
+        масштабирования интернета.
+    </p>
+    <p>
+        NSFNET стала переходным этапом от экспериментальных сетей к глобальному интернету.
+    </p>
+</section>
+
+<section id="tcpip">
+    <h2>TCP/IP</h2>
+    <p>
+        Протоколы TCP/IP были разработаны Винтом Серфом и Робертом Каном для объединения различных сетей.
+        IP отвечает за доставку пакетов, а TCP — за надёжность передачи и правильный порядок данных.
+    </p>
+    <p>
+        TCP/IP стал универсальным стандартом, который используется в интернете до сих пор.
+    </p>
+</section>
+
+<section id="dns">
+    <h2>DNS — система доменных имён</h2>
+    <p>
+        С ростом интернета стало неудобно использовать числовые IP-адреса. В 1983 году Пол Мокапетрис
+        предложил DNS — систему, переводящую доменные имена в IP-адреса.
+    </p>
+    <p>
+        DNS можно представить как телефонную книгу интернета.
+    </p>
+</section>
+
+<section id="www">
+    <h2>Всемирная паутина (WWW)</h2>
+    <p>
+        В 1989 году Тим Бернерс-Ли создал World Wide Web, используя HTML, HTTP и URL.
+        Это сделало интернет удобным для обычных пользователей.
+    </p>
+    <p>
+        WWW позволила просматривать сайты, переходить по ссылкам и получать информацию
+        в наглядной форме.
+    </p>
+</section>
+
+<footer>
+    <p>Учебный проект по информатике | 9 класс</p>
+</footer>
+
 </body>
 </html>
