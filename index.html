@@ -1,161 +1,172 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>История создания и развития интернета</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #5fc3e4, #2c82c9);
-            color: #ffffff;
-        }
+<meta charset="UTF-8">
+<title>Практическая часть: как работает интернет</title>
 
-        header {
-            padding: 40px;
-            text-align: center;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #1b2735, #090a0f);
+    color: #eaeaea;
+}
 
-        header h1 {
-            margin-bottom: 10px;
-        }
+header {
+    text-align: center;
+    padding: 50px;
+    background: rgba(0,0,0,0.6);
+}
 
-        header p {
-            font-size: 18px;
-        }
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 10px;
+}
 
-        nav {
-            background-color: rgba(0, 0, 0, 0.2);
-            padding: 10px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-        }
+h2 {
+    border-left: 5px solid #00d2ff;
+    padding-left: 10px;
+}
 
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+.demo {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0,0,0,0.5);
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+button {
+    padding: 10px 20px;
+    margin: 5px 0;
+    background: #00d2ff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
 
-        section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.25);
-            border-radius: 10px;
-        }
+.packet, .node {
+    display: inline-block;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    background: #1abc9c;
+}
 
-        section h2 {
-            border-bottom: 2px solid #ffffff;
-            padding-bottom: 10px;
-        }
+.node {
+    background: #3498db;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-    </style>
+.result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>История создания и развития интернета</h1>
-    <p>Учебный проект по информатике</p>
-    <p>Тищенко Александр, 9Б класс</p>
+<h1>Практическая демонстрация работы интернета</h1>
+<p>История и технологии глобальных сетей</p>
 </header>
 
-<nav>
-    <a href="#npl">NPL Network</a>
-    <a href="#arpanet">ARPANET</a>
-    <a href="#nsfnet">NSFNET</a>
-    <a href="#tcpip">TCP/IP</a>
-    <a href="#dns">DNS</a>
-    <a href="#www">WWW</a>
-</nav>
+<section>
+<h2>1. Пакетная передача данных</h2>
+<p>
+Сообщение разбивается на отдельные пакеты, которые передаются независимо друг от друга
+и собираются на стороне получателя.
+</p>
 
-<section id="npl">
-    <h2>NPL Network — первая пакетная сеть</h2>
-    <p>
-        В 1960-х годах в Национальной физической лаборатории Великобритании под руководством Дональда Дэвиса
-        была создана сеть NPL Network. Она стала первой сетью, где пакетная передача данных была реализована
-        на практике.
-    </p>
-    <p>
-        Данные передавались в виде небольших пакетов, которые могли идти разными путями и затем
-        собираться в исходное сообщение. Этот подход значительно повысил надёжность передачи информации
-        и эффективность использования каналов связи.
-    </p>
+<div class="demo">
+<button onclick="packets()">Отправить сообщение</button>
+<div id="packets"></div>
+<div id="packetsResult"></div>
+</div>
 </section>
 
-<section id="arpanet">
-    <h2>ARPANET</h2>
-    <p>
-        Идеи, проверенные в NPL Network, легли в основу ARPANET, запущенной в 1969 году агентством ARPA (США).
-        Сеть объединила университеты и исследовательские центры и стала первой национальной пакетной сетью.
-    </p>
-    <p>
-        В 1971 году в ARPANET появилась электронная почта, что показало практическую ценность сетевых
-        технологий и сделало сеть востребованной среди пользователей.
-    </p>
+<section>
+<h2>2. Маршрутизация пакетов</h2>
+<p>
+Каждый пакет может проходить через разные сетевые узлы (маршрутизаторы),
+что повышает устойчивость сети.
+</p>
+
+<div class="demo">
+<button onclick="routing()">Показать маршрутизацию</button>
+<div id="routes"></div>
+</div>
 </section>
 
-<section id="nsfnet">
-    <h2>NSFNET</h2>
-    <p>
-        В 1985 году Национальный научный фонд США создал NSFNET — сеть, которая объединила университеты,
-        научные центры и суперкомпьютеры. Она использовала протоколы TCP/IP и стала основой для
-        масштабирования интернета.
-    </p>
-    <p>
-        NSFNET стала переходным этапом от экспериментальных сетей к глобальному интернету.
-    </p>
+<section>
+<h2>3. DNS — преобразование имени в IP</h2>
+<p>
+DNS переводит доменные имена, удобные для человека, в числовые IP-адреса,
+которые используются компьютерами.
+</p>
+
+<div class="demo">
+<button onclick="dns()">Запросить IP-адрес</button>
+<div id="dnsResult"></div>
+</div>
 </section>
 
-<section id="tcpip">
-    <h2>TCP/IP</h2>
-    <p>
-        Протоколы TCP/IP были разработаны Винтом Серфом и Робертом Каном для объединения различных сетей.
-        IP отвечает за доставку пакетов, а TCP — за надёжность передачи и правильный порядок данных.
-    </p>
-    <p>
-        TCP/IP стал универсальным стандартом, который используется в интернете до сих пор.
-    </p>
+<section>
+<h2>4. Клиент — сервер</h2>
+<p>
+Браузер (клиент) отправляет запрос серверу, а сервер возвращает ответ
+в виде веб-страницы.
+</p>
+
+<div class="demo">
+<button onclick="clientServer()">Отправить HTTP-запрос</button>
+<div id="csResult"></div>
+</div>
 </section>
 
-<section id="dns">
-    <h2>DNS — система доменных имён</h2>
-    <p>
-        С ростом интернета стало неудобно использовать числовые IP-адреса. В 1983 году Пол Мокапетрис
-        предложил DNS — систему, переводящую доменные имена в IP-адреса.
-    </p>
-    <p>
-        DNS можно представить как телефонную книгу интернета.
-    </p>
-</section>
+<script>
+function packets() {
+    const text = "INTERNET";
+    const div = document.getElementById("packets");
+    const res = document.getElementById("packetsResult");
+    div.innerHTML = "";
+    res.innerHTML = "";
 
-<section id="www">
-    <h2>Всемирная паутина (WWW)</h2>
-    <p>
-        В 1989 году Тим Бернерс-Ли создал World Wide Web, используя HTML, HTTP и URL.
-        Это сделало интернет удобным для обычных пользователей.
-    </p>
-    <p>
-        WWW позволила просматривать сайты, переходить по ссылкам и получать информацию
-        в наглядной форме.
-    </p>
-</section>
+    text.split("").forEach((c, i) => {
+        setTimeout(() => {
+            div.innerHTML += `<div class="packet">Пакет ${i+1}: ${c}</div>`;
+        }, i * 400);
+    });
 
-<footer>
-    <p>Учебный проект по информатике | 9 класс</p>
-</footer>
+    setTimeout(() => {
+        res.innerHTML = "Сообщение собрано: INTERNET";
+    }, text.length * 400 + 500);
+}
+
+function routing() {
+    const div = document.getElementById("routes");
+    div.innerHTML = "";
+    const nodes = ["Клиент", "Маршрутизатор A", "Маршрутизатор B", "Сервер"];
+
+    nodes.forEach((n, i) => {
+        setTimeout(() => {
+            div.innerHTML += `<div class="node">${n}</div>`;
+        }, i * 500);
+    });
+}
+
+function dns() {
+    document.getElementById("dnsResult").innerHTML =
+        "example.com → 93.184.216.34";
+}
+
+function clientServer() {
+    document.getElementById("csResult").innerHTML =
+        "GET /index.html → HTTP/1.1 200 OK";
+}
+</script>
 
 </body>
 </html>
+
