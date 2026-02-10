@@ -19,8 +19,8 @@ export default function Home() {
               История появления и развития <span className="text-primary">Интернета</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Путешествие от первых телеграфов до глобальной сети, объединяющей миллиарды людей. 
-              Узнайте, как технологии изменили мир.
+              Индивидуальный итоговый проект ученика 9б класса Тищенко Александра. 
+              Путешествие от первого телеграфа до глобальной сети.
             </p>
             <div className="flex justify-center gap-4">
               <Link href="/history">
@@ -40,9 +40,9 @@ export default function Home() {
                 <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <History className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Этапы развития</h3>
+                <h3 className="text-xl font-semibold mb-2">Этапы эволюции</h3>
                 <p className="text-muted-foreground">
-                  От телеграфа 19 века до современного высокоскоростного интернета.
+                  От электрического телеграфа 1830-х годов до современных цифровых систем.
                 </p>
               </div>
               <div className="bg-card p-6 rounded-xl border shadow-sm">
@@ -51,22 +51,29 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Технологии</h3>
                 <p className="text-muted-foreground">
-                  Как работают пакетная передача данных, протоколы и сети.
+                  Пакетная передача, протоколы TCP/IP и World Wide Web.
                 </p>
               </div>
               <div className="bg-card p-6 rounded-xl border shadow-sm">
                 <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <Globe className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Глобальное влияние</h3>
+                <h3 className="text-xl font-semibold mb-2">Проверка знаний</h3>
                 <p className="text-muted-foreground">
-                  Как интернет объединил мир и изменил способы общения.
+                  Интерактивные тесты для закрепления изученного материала.
                 </p>
               </div>
             </div>
           </div>
         </section>
       </main>
+
+      <footer className="py-12 border-t">
+        <div className="container mx-auto px-4 text-center text-muted-foreground">
+          <p>Автор проекта: Тищенко Александр</p>
+          <p className="text-sm">МБОУ ШКОЛА №33, Самара, 2026</p>
+        </div>
+      </footer>
     </div>
   );
 }
