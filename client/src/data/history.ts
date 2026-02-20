@@ -42,7 +42,7 @@ export const historyData: HistoryItem[] = [
     year: "1940-1950",
     description: "Обработка информации в виде двоичного кода.",
     fullText: "В середине XX века появились первые электронные цифровые компьютеры (ENIAC, Colossus). Они обрабатывали информацию в виде битов (0 и 1). Для связи компьютеров через телефонные линии были созданы модемы, преобразующие цифровой сигнал в аналоговый и обратно.",
-    image: "/src/assets/images/computer-terminal.jpg",
+    image: "/src/assets/images/eniac.jpg",
     tags: ["ENIAC", "Биты", "Модемы"]
   },
   {
@@ -105,7 +105,7 @@ export const historyData: HistoryItem[] = [
     year: "1990-е",
     description: "Всемирная паутина, сайты и браузеры.",
     fullText: "Тим Бернерс-Ли изобрел HTTP, HTML и первый браузер в CERN. Это превратило Интернет из инструмента ученых в удобное пространство для всех людей. Появились гиперссылки, позволяющие мгновенно переходить с одной страницы на другую.",
-    image: "/src/assets/images/next-computer.jpg",
+    image: "/src/assets/images/www.jpg",
     tags: ["WWW", "HTML", "Бернерс-Ли"]
   }
 ];
